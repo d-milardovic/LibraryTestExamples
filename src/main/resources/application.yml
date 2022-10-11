@@ -1,0 +1,20 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+spring:
+  datasource:
+    initialization-mode: always
+    password: password
+    username: sa
+    url: jdbc:h2:~/data
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
